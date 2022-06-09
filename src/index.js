@@ -1,17 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-
+import Navbar from './Components/Navbar';
+import { Provider } from 'react-redux';
+import { intialStore } from './Redux/store';
+import { reducer } from './Redux/reducer';
+import { createStore } from 'redux'; 
+import SearchPlayer from './Pages/SearchPlayer';
+import Champions from './Pages/Champions';
+import Nothing from './Pages/Nothing';
+import Loading from './Loading/Loading';
+const store = createStore(reducer,intialStore) 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <Provider store={store}>
   <React.StrictMode>
     <App />
   </React.StrictMode>
+  </Provider>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

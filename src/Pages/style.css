@@ -1,0 +1,137 @@
+/* Home  */
+.background-image-home{
+    width: 100%;
+    height: calc(100vh - 76px ); 
+    background: url('../images/2020_Banner.jpg') no-repeat center/cover ;  
+    z-index: -2;
+}
+body{
+    background-color: 		#F8F8F8;
+}
+@media (max-width:800px){
+    .background-image-home{
+        height: 50vh;
+    }
+}
+.context {
+    width: 65%;
+    margin:30px auto ; 
+    display: flex;
+
+}
+.context h1 {
+    padding:10px ; 
+    font-size: 32px; 
+    color: #003459;
+
+}
+.context p {
+    padding:10px ; 
+    font-size: 25px; 
+    color: #00171F;
+
+}
+.context .img{
+    width: 40%;
+    padding:10px ; 
+}
+.context .img img {
+    width: 100%;
+
+}
+.title{
+    margin: 0 auto;
+    width: 20%;
+    margin-top:50px ; 
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 25px;
+}
+.underline { 
+    width: 30%;
+    display: block;
+    margin: 10px auto 5px;
+    height: 4px;
+    background-color: deepskyblue;
+    border-radius: 2px;
+}
+@media (max-width:800px){
+    .context{
+        flex-direction: column;
+        align-items: center;
+    }
+    .context-change {
+        flex-direction: column-reverse;
+        
+    }
+    .context p , .context h1 {
+        align-items: center;
+
+    }
+}
+.search{
+    margin:20px auto ; 
+    width: 90%; 
+   
+    text-align: center;
+    margin-top: 150px;
+}
+.champions-page{
+    width: 60%;
+    margin:200px auto ; 
+}
+.champions{
+    min-height: 1000px;
+    display: grid;
+    grid-template-rows:    repeat(4, 150px);
+    grid-template-columns: repeat(6, 1fr);
+}
+.champions-buttons {
+    
+}
+.search-reseach{
+    display: block;
+}
+
+@media(max-width:800px){
+    .champions-page{
+        width: 50%;
+    }
+    .champions  {
+    width: 100%;
+    margin-left:-60px ;
+    grid-template-rows:    repeat(40, 150px);
+    grid-template-columns: repeat(4, 1fr);  
+    gap: 10px; 
+    }
+    .champions img {
+        width: 75px;
+        height: 75px;
+    }
+    .champions div {
+        width: 75px;
+        height : 85px ;
+    }
+    .champions-buttons{
+        flex-direction: column;
+        align-items: center;
+    }
+    .options-types-champs{
+        margin-top:20px ; 
+        margin-bottom: 10px;
+        display: block;
+        margin-left: -80px;
+        width: 400px;
+    }
+}
+
+.flex{
+    margin:10px auto ; 
+    width: 60%;
+    justify-content: space-around;
+}
+@media (max-width:700px){
+    .flex{
+        flex-direction: column-reverse;
+    }
+}
