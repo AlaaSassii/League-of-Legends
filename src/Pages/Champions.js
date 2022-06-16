@@ -44,6 +44,11 @@ const Champions = () => {
         })
             .catch(err => console.log(err))
     },[])
+    const handleChange = e => {
+        setValue(e.target.value)
+        const Value = e.target.value 
+        setChampions(Championss.filter(champ => champ.name.toLowerCase().includes(e.target.value.toLowerCase()) ))
+    }
 
   return (
     <div className="champions-page">
@@ -51,19 +56,14 @@ const Champions = () => {
         {
             loading? <Loading/>: <div>
     <div className="champions-buttons">
-        <TextField  value={value} onChange={e => setValue(e.target.value) }
+        <TextField  value={value} onChange={e => handleChange(e) }
          variant='filled' color="primary" label="type champion name" size='small' className="search-reseach" />
        <div style={{display:"inline",marginTop:"20px"}}>
     <ButtonGroup style={{marginTop:"5px",marginLeft:"5px"}}>
-      <Button size='large' onClick={() =>{ value && setChampions(Champions.filter(champ => champ.name.toLowerCase().includes(value.toLowerCase()) ))}} variant='contained' color="primary"  >
-        search
-        </Button>
-        <Button size='large' variant='contained' disabled={Championss.length > Champions.length ? false : true} color='primary' onClick={()=>{setChampions(Championss); setValue('')}} >
-        All
-        </Button>
-        </ButtonGroup>
     <ButtonGroup className="options-types-champs" >
         {types.map(type =><Button onClick={()=>filterTypes(type)}  key={type}>{type}</Button>)}
+     
+        </ButtonGroup>
     </ButtonGroup>
     </div>
 
