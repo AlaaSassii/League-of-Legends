@@ -7,4 +7,4 @@ then you need to sing in in [riot games](https://developer.riotgames.com/) to ge
 #### if you don't have account 
 you need  to connect to the owner of this app (alaasassijs@gmail.com) 
 ---
-this got some bugs now :(
+Have Fun
